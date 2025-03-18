@@ -1571,6 +1571,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 	Elements.Visible = false
 	LoadingFrame.Visible = true
 
+--[[
+im sorry shlex :/
 	if not Settings.DisableRayfieldPrompts then
 		task.spawn(function()
 			while true do
@@ -1584,7 +1586,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			end
 		end)
 	end
-
+--]]
 	pcall(function()
 		if not Settings.ConfigurationSaving.FileName then
 			Settings.ConfigurationSaving.FileName = tostring(game.PlaceId)
