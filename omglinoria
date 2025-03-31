@@ -3594,7 +3594,7 @@ function Library:CreateWindow(...)
                 TweenService:Create(Desc, TweenInfo.new(FadeTime, Enum.EasingStyle.Linear), { [Prop] = Toggled and Cache[Prop] or 1 }):Play();
             end;
         end;
-        if not Toggled then
+        if Toggled then
             TweenService:Create(Outer, TweenInfo.new(FadeTime, Enum.EasingStyle.Linear), { BackgroundTransparency = 1 }):Play();
         end
         if not Toggled then
