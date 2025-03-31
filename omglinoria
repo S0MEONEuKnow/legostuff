@@ -3595,7 +3595,7 @@ function Library:CreateWindow(...)
             end;
         end;
 
-        task.wait(FadeTime+1);
+        task.wait(FadeTime);
 
         Outer.Visible = Toggled;
 
