@@ -3601,7 +3601,7 @@ function Library:CreateWindow(...)
             TweenService:Create(Outer, TweenInfo.new(FadeTime, Enum.EasingStyle.Linear), { BackgroundTransparency = 0 }):Play();
         end
         task.wait(FadeTime);
-        --Outer.Visible = Toggled;
+        Outer.Visible = Toggled;
 
         Fading = false;
     end
