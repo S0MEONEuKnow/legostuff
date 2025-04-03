@@ -13,4 +13,7 @@ return function(args)
         ui.Parent = nil
         callback()
     end)
+    task.delay(5,function()
+        ui.Parent = nil
+    end)
 end
