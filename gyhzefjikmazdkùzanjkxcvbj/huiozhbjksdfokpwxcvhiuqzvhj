@@ -1,23 +1,25 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/S0MEONEuKnow/legostuff/refs/heads/main/gyhzefjikmazdk%C3%B9zanjkxcvbj/hjkdfghjkgbsdfoqhgsqdgsdf"))()
+loadstring([==[
+	local serverhoptime = 30
 
-local serverhoptime = 60
+task.spawn(function()
+	wait(serverhoptime)
+	local serverhopper = loadstring(game:HttpGet("https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua"))()
+	serverhopper:Teleport(game.PlaceId)
+end)
+]==])()
 
 function missing(t, f, fallback)
     if type(f) == t then return f end
     return fallback
 end
 
-queueteleport =  missing("function", queue_on_teleport or (syn and syn.queue_on_teleport) or (fluxus and fluxus.queue_on_teleport))
+queueteleport = missing("function", queue_on_teleport or (syn and syn.queue_on_teleport) or (fluxus and fluxus.queue_on_teleport))
 
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
 	if queueteleport then
 		TeleportCheck = true
-		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/S0MEONEuKnow/legostuff/refs/heads/main/gyhzefjikmazdk%C3%B9zanjkxcvbj/huiozhbjksdfokpwxcvhiuqzvhj'))()")
+		queueteleport("wait(7) loadstring(game:HttpGet('https://raw.githubusercontent.com/S0MEONEuKnow/legostuff/refs/heads/main/gyhzefjikmazdk%C3%B9zanjkxcvbj/huiozhbjksdfokpwxcvhiuqzvhj'))()")
 	end
 end)
 
-task.spawn(function()
-	wait(serverhoptime)
-	local serverhopper = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
-	serverhopper:Teleport(game.PlaceId)
-end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/S0MEONEuKnow/legostuff/refs/heads/main/gyhzefjikmazdk%C3%B9zanjkxcvbj/hjkdfghjkgbsdfoqhgsqdgsdf"))()
