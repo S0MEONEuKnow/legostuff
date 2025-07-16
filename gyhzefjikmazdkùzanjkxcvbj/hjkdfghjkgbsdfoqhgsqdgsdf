@@ -1,0 +1,29 @@
+-- Setting it to false will kill you. This is because dying resets the invisibility
+getgenv().Enabled = true
+getgenv().config = {
+	serverhoptime = 60 -- in seconds
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/WetCheezit/Releases/main/Big-Paintball/KillAll.lua"))()
+
+
+
+local vim = game:GetService('VirtualInputManager')
+local plr = game:GetService("Players").LocalPlayer
+local mouse = plr:GetMouse()
+
+function MouseButtonClick(button)
+    vim:SendMouseButtonEvent(mouse.X, mouse.Y, button, true, game, 1)
+    task.wait()
+    vim:SendMouseButtonEvent(mouse.X, mouse.Y, button, false, game, 1)
+end
+
+function Key()
+	vim:SendKeyEvent(true, Enum.KeyCode.Space, false, workspace)
+	wait(0.005)
+    vim:SendKeyEvent(false, Enum.KeyCode.Space, false, workspace)
+end
+
+while wait(0.1) do
+	MouseButtonClick(0)
+	Key()
+end
