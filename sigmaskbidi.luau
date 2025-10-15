@@ -48,7 +48,7 @@ function onserverhop(str)
         -- Fetch server list
         local url = string.format("https://games.roblox.com/v1/games/%d/servers/Public?sortOrder=Asc&limit=100&cursor=%s", PLACE_ID, cursor)
         local success, response = pcall(function()
-            return HttpService:GetAsync(url)
+            return game:HttpGet(url)
         end)
 
         if not success then
@@ -85,5 +85,5 @@ function onserverhop(str)
         task.wait()
     end
 end
-
+onserverhop()
 queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/S0MEONEuKnow/legostuff/refs/heads/main/sigmaskbidi.luau"))()]])
