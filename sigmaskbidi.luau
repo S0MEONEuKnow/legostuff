@@ -1,3 +1,6 @@
+getgenv().TARGET_USER_ID = 4155169352
+getgenv().visitedServerIds = {}
+
 local HttpService = game:GetService("HttpService")
 local TeleportService = game:GetService("TeleportService")
 local Players = game:GetService("Players")
@@ -85,5 +88,7 @@ function onserverhop(str)
         task.wait()
     end
 end
-onserverhop()
 queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/S0MEONEuKnow/legostuff/refs/heads/main/sigmaskbidi.luau"))()]])
+while wait(.05) do
+	onserverhop()
+end
